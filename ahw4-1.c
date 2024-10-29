@@ -10,7 +10,7 @@ int main(void)
         printf("%d is a negative number",x);
     }
     if (x==0){
-        printf("You entered 0");
+        printf("You entered zero");
     }
     return 0;
 }
