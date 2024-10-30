@@ -1,23 +1,25 @@
-int main(void)
-{
-double a,b,c,d;
-printf("a? ");
+#include <stdio.h>
+#include <math.h>
+int main(void) {	
+double a, b, c, d;
 scanf("%lf", &a);
-printf("b? ");
 scanf("%lf", &b);
-printf("c? ");
 scanf("%lf", &c);
-d = b*b - 4*a*c;
-printf("Input is a=%f b=%f c=%f:\n", a, b, c);
-if (d<0){
-    printf("The real solution does not exist");
-    return 0;
+printf("Input is a=%f", a);
+printf(" b=%f", b); 
+printf(" c=%f:\n", c);
+if (a==0) {
+    printf("Output should be %f\n", -c/b);
 }
-if (a==0){
-    printf("Output should be %f",-c/d);
-}
-if (d>=0 && a!=0){
-    printf("Output should be %f and %f",(-b+sqrt(d))/2*a,(-b-sqrt(d))/2*a);
+else {
+	d = b*b - 4*a*c;
+	if (d<0){
+		printf("Output should be the real solution does not exist\n");
+	}   
+	else {
+        printf("Output should be %f and ", (-b+sqrt(d))/2*a);
+        printf("%f\n", (-b-sqrt(d))/2*a);
+	}
 }
 return 0;
 }
